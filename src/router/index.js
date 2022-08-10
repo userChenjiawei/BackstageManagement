@@ -1,5 +1,5 @@
 // import axios from 'axios'
-import { createRouter, createWebHashHistory } from "vue-router";
+import { createRouter, createWebHistory } from "vue-router";
 let routeList = [];
 function importAll(r) {
   r.keys().forEach((key) => routeList.push(r(key).default));
@@ -59,7 +59,7 @@ const routes = [
   },
 ];
 const router = createRouter({
-  hash: createWebHashHistory(), //路由模式
+  history: createWebHistory(), //路由模式
   routes,
 });
 
